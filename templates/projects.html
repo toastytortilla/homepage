@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+    Projects
+
+{% endblock %}
+
+{% block nav %}
+
+  <nav class="nav nav-masthead justify-content-center masthead-justify">
+      <a class ="nav-link" href="/">Home</a>
+      <a class ="nav-link" href="/aboutme">About Me</a>
+      <a class ="nav-link active" href="/projects">Projects</a>
+      <a class ="nav-link" href="/contact">Contact</a>
+  </nav>
+
+{% endblock %}
+
+{% block main %}
+
+  <h1 class="cover-heading">Projects</h1>
+  <p>I don't have a lot to show yet, but these are the projects that I'm most proud of:</p>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h4 class="accordion-header" id="headingOne">
+            <button class="accordion-button pad-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              This Website
+            </button>
+          </h4>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p class="bpad"><strong>Since we're here, we should start here!</strong> This website has been a fun project for me. The goal was to make a personal website. The most difficult part was navigating the intimdating vastness of the web dev world. To overcome this difficulty, I had to accept that my website won't (and shouldn't) be perfect on the first try and push myself to just learn new concepts one at a time.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h4 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed pad-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              pset4: recover
+            </button>
+          </h4>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p class="bpad"><strong>Recover was a landmark assignment for me.</strong> The objective was to write a program in C that would recover 50 deleted .jpg photos from a .raw file. It was a challenge to understand how to read, write, and free memory in C. I'm extra proud of this assignment because it was the first one where I felt that I truly understood the required logic, it was proof that I was making progress.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h4 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed pad-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              pset6: readability
+            </button>
+          </h4>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p class="bpad"><strong>Readability was suprisingly frustrating.</strong> The goal was to reconstruct a program we had written in C which would take text as input and return the approximate grade level of difficulty. Despite knowing the logic for the program and having some prior experience with Python, I quickly found that things <i>weren't as straightforward</i> as I assumed. Python can be powerful because of its abstraction, but it is still crucial to understand what is happening underneath the hood to make a well-designed program. Once I grasped what implicit assumptions Python and it's libraries were making, I was able to complete the project with relative ease.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+{% endblock %}

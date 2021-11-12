@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+    Contact
+
+{% endblock %}
+
+{% block jscript %}
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('#check').addEventListener('click', function() {
+                    let input = document.querySelector('input');
+                    if (input.value) {
+                        document.querySelector('#feedback1').innerHTML = `Oh hey, ${input.value} :)`;
+                    }
+                });
+            });
+        </script>
+
+{% endblock %}
+
+
+{% block nav %}
+
+    <nav class="nav nav-masthead justify-content-center masthead-justify">
+        <a class ="nav-link" href="/">Home</a>
+        <a class ="nav-link" href="/aboutme">About Me</a>
+        <a class ="nav-link" href="/projects">Projects</a>
+        <a class ="nav-link active" href="/contact">Contact</a>
+    </nav>
+
+{% endblock %}
+
+{% block main %}
+    <h1 class="cover-heading" style="margin-bottom: 2rem;">Contact</h1>
+    <p style="margin-bottom: 4rem;">I'm not big on social media, but you can reach me on <span><a href="https://discord.com/">Discord</a></span> @ ToastyTortilla#7850</p>
+
+    <h4 style="margin-bottom: 2rem;">Before you go, say hello!</h4>
+    <p>You came all this way right? You might as well say "hey".</p>
+
+
+        <form action="/contact" method="post">
+            <div class="pad-3 mbottom-auto">
+                <input class="rounded border mb-3" autocomplete="off" name="first_name" placeholder=" First Name" type="text" autofocus required>
+                <input class="rounded border mb-1" autocomplete="off" name="last_name" placeholder=" Last Name" type="text">
+            </div>
+            <div class="mtop-auto lead">
+                <input type="submit" value="Submit" class="btn btn-sm btn-secondary" type="button" id="check">
+            </div>
+
+        </form>
+
+    <p style="transition: ease 250ms" id="feedback1"></p>
+
+
+    <h4>Visitors</h4>
+
+    <div style="height: 8rem; overflow-y: auto">
+        <table class="mx-auto table table-hover table-sm table-text">
+            <tbody>
+                {% for visitor in visitors %}
+
+                <tr>
+                    <td>"{{ visitor.comment }}" </td>
+                    <td> - </td>
+                    <td>{{ visitor.first_name }}</td>
+                </tr>
+
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+    Home
+
+{% endblock %}
+
+{% block nav %}
+
+    <nav class="nav nav-masthead justify-content-center masthead-justify">
+        <a class ="nav-link active" href="/">Home</a>
+        <a class ="nav-link" href="/aboutme">About Me</a>
+        <a class ="nav-link" href="/projects">Projects</a>
+        <a class ="nav-link" href="/contact">Contact</a>
+    </nav>
+
+{% endblock %}
+
+{% block main %}
+
+    <h1 class="cover-heading">why, hello there <a class="wink" href=""></a></h1>
+    <p class="lead">Welcome to my website! I'm glad you're here. Please, take off your shoes and make yourself comfortable. Or don't. That's cool too.</p>
+    <p class="lead">I made this website to satisfy the requirements of pset8 in the CS50x course offered on edX
+        , but it seems like it could be a good place to call home hereafter... At any rate, feel free to look around!</p>
+    <div class="mtop-auto lead">
+            <a href="/aboutme"><input type="button" value="Learn More" class="btn btn-lg btn-secondary"></a>
+    </div>
+
+{% endblock %}

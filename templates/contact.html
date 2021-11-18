@@ -63,9 +63,9 @@
                 {% for visitor in visitors %}
 
                 <tr>
-                    <td>"{{ visitor.comment }}" </td>
+                    <td>"{{ visitor["comment"] }}"</td>
                     <td> - </td>
-                    <td>{{ visitor.first_name }}</td>
+                    <td>{{ visitor["first_name"] }}</td>
                 </tr>
 
                 {% endfor %}

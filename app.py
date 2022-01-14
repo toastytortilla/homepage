@@ -24,17 +24,17 @@ COMMENTS = [
     "This site slaps!!"
 ]
 
-@app.route("/", method=["GET"])
+@app.route("/", methods=["GET"])
 def index():
     return render_template("index.html")
 
 
-@app.route("/aboutme", method=["GET"])
+@app.route("/aboutme", methods=["GET"])
 def aboutme():
     return render_template("aboutme.html")
 
 
-@app.route("/projects", method=["GET"])
+@app.route("/projects", methods=["GET"])
 def projects():
     return render_template("projects.html")
 

@@ -19,20 +19,22 @@ COMMENTS = [
     "The color palette is very 90's Taco Bell 🔥",
     "Sweet site, brahh",
     "My dog loves your website.",
-    "This site feels homey, nice work!"
+    "This site feels homey, nice work!",
+    "Tell your dog I said hi",
+    "This site slaps!!"
 ]
 
-@app.route("/")
+@app.route("/", method=["GET"])
 def index():
     return render_template("index.html")
 
 
-@app.route("/aboutme")
+@app.route("/aboutme", method=["GET"])
 def aboutme():
     return render_template("aboutme.html")
 
 
-@app.route("/projects")
+@app.route("/projects", method=["GET"])
 def projects():
     return render_template("projects.html")
 

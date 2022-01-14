@@ -56,7 +56,7 @@ def contact():
         comment = COMMENTS[i]
 
         # Remember visitor
-        cur.execute("INSERT INTO visitors (first_name, last_name, comment) VALUES (?, ?, ?)", first_name, last_name, comment)
+        cur.execute("INSERT INTO visitors (first_name, last_name, comment) VALUES (?, ?, ?)", (first_name, last_name, comment))
 
         # Save (commit) the changes
         vis.commit()
